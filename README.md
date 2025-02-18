@@ -1,6 +1,6 @@
 # PI Ready Workshop - Esprit Students
 
-<img src="https://symfony.com/logos/symfony_black_03.png" alt="Symfony Logo" width="200"><img src="[https://cdio.esprit.tn/images/cdio/esprit.png]" alt="Symfony Logo" width="200">
+<img src="https://symfony.com/logos/symfony_black_03.png" alt="Symfony Logo" width="200">
 
 Welcome to the **PI Ready Workshop** project! This repository is dedicated to supporting Esprit students in their learning journey.
 
@@ -21,10 +21,11 @@ Students are encouraged to:
 - Follow best practices in coding and documentation.
 
 Students are encouraged to:
-- Fork the repository and work on their assigned tasks.
+- Fork the repository and work on their repositories.
 - Follow best practices in coding and documentation.
 
 ## Acknowledgement
 We would like to express our gratitude to **ESPRIT** and the contributing teachers for their dedication and support in making this workshop a success.
+<img src="https://cdio.esprit.tn/images/cdio/esprit.png" alt=" ESPRITLogo" width="200">
 
 Happy coding!
