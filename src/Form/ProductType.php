@@ -16,13 +16,13 @@ class ProductType extends AbstractType
             ->add('description')
             ->add('price')
             ->add('quantity')
-            ->add('updatedAt', null, [
+            /*->add('updatedAt', null, [
                 'widget' => 'single_text'
             ])
             ->add('createdAt', null, [
                 'widget' => 'single_text'
             ])
-            ->add('slug')
+            ->add('slug')*/
         ;
     }
 

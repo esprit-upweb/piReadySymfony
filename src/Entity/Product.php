@@ -3,15 +3,17 @@
 namespace App\Entity;
 
 use App\Repository\ProductRepository;
+use Cocur\Slugify\Slugify;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Validator\Constraints as Assert;
-use Cocur\Slugify\Slugify;
+use Gedmo\Mapping\Annotation as Gedmo;
 
 #[ORM\Entity(repositoryClass: ProductRepository::class)]
 #[ORM\HasLifecycleCallbacks]
 #[UniqueEntity('slug', message: 'Ce slug existe déjà')]
+
 class Product
 {
     #[ORM\Id]
@@ -31,18 +33,18 @@ class Product
     #[ORM\Column]
     private ?int $quantity = null;
 
+    #[Gedmo\Slug(fields: ['name'])]
+    #[ORM\Column(type: 'string', length: 255, unique: true)]
+    private string $slug;
+
+    #[Gedmo\Timestampable(on: 'create')]
     #[ORM\Column(type: 'datetime_immutable')]
-    #[Assert\NotNull()]
+    private \DateTimeImmutable $createdAt;
+
+    #[Gedmo\Timestampable(on: 'update')]
+    #[ORM\Column(type: 'datetime_immutable')]
     private \DateTimeImmutable $updatedAt;
 
-    #[ORM\Column(type: 'datetime_immutable')]
-    #[Assert\NotNull()]
-    private \DateTimeImmutable $createdAt;
-    
-    #[ORM\Column(length: 255, unique: true)]
-    #[Assert\NotNull()]
-    #[Assert\NotBlank()]
-    private ?string $slug = null;
     public function getId(): ?int
     {
         return $this->id;
@@ -105,25 +107,7 @@ class Product
         $this->slug = $slug;
         return $this;
     }
-
-    #[ORM\PrePersist]
-    public function prePersist()
-    {
-        $this->createdAt = new \DateTimeImmutable();
-        if ($this->name !== null) {
-            $this->slug = (new Slugify())->slugify($this->name);
-        } else {
-            $this->slug = '';
-        }
-    }
-
-    #[ORM\PreUpdate]
-    public function preUpdate()
-    {
-        $this->updatedAt = new \DateTimeImmutable();
-    }
-
-    public function getUpdatedAt(): \DateTimeImmutable
+        public function getUpdatedAt(): \DateTimeImmutable
     {
         return $this->updatedAt;
     }
@@ -144,4 +128,5 @@ class Product
         $this->createdAt = $createdAt;
         return $this;
     }
+
 }

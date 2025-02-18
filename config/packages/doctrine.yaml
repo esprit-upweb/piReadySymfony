@@ -22,7 +22,12 @@ doctrine:
                 dir: '%kernel.project_dir%/src/Entity'
                 prefix: 'App\Entity'
                 alias: App
-
+            gedmo:
+                type: attribute
+                prefix: Gedmo
+                dir: "%kernel.project_dir%/vendor/gedmo/doctrine-extensions/src"
+                alias: Gedmo
+                is_bundle: false
 when@test:
     doctrine:
         dbal:
