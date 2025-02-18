@@ -1,0 +1,83 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Product index{% endblock %}
+
+{% block body %}
+    <h1>Product index</h1>
+    {# Search Form #}
+    <form id="search-form">
+        <label for="search-query">Search for products:</label>
+        <input type="text" id="search-query" class="form-control" name="search-query" placeholder="Enter product name..." autocomplete="off">
+    </form>
+    {# end of Search Form #}
+    <div id="search-results">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>UpdatedAt</th>
+                <th>CreatedAt</th>
+                <th>Slug</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for product in products %}
+            <tr>
+                <td>{{ product.id }}</td>
+                <td>{{ product.name }}</td>
+                <td>{{ product.description }}</td>
+                <td>{{ product.price }}</td>
+                <td>{{ product.quantity }}</td>
+                <td>{{ product.updatedAt ? product.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ product.createdAt ? product.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ product.slug }}</td>
+                <td>
+                    <a href="{{ path('app_product_show', {'id': product.id}) }}">show</a>
+                    <a href="{{ path('app_product_edit', {'id': product.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="9">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_product_new') }}">Create new</a>
+</div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Trigger search on keyup in the input field
+            
+            $('#search-query').on('input', function() {
+                var query = $(this).val();
+    
+                // If query length is at least 3 characters, make an Ajax request
+                if (query.length >= 1) {
+                    $.ajax({
+                        url: '{{ path('product_search') }}',  // The Symfony route for the search action
+                        method: 'GET',
+                        data: { query: query },
+                        dataType: 'json',
+                        success: function(response) {
+                            $('#search-results').html(response.html);  // Insert the HTML into the results div
+                        },
+                        error: function() {
+                            alert('Error during search.');
+                        }
+                    });
+                } else {
+                    $('#search-results').html('');  // Clear results if query is too short
+                }
+            });
+        });
+    </script>
+    
+    {% endblock %}
