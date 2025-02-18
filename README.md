@@ -1,6 +1,6 @@
 # PI Ready Workshop - Esprit Students
 
-![Symfony Logo](https://symfony.com/logos/symfony_black_03.png)
+<img src="https://symfony.com/logos/symfony_black_03.png" alt="Symfony Logo" width="200">
 
 Welcome to the **PI Ready Workshop** project! This repository is dedicated to supporting Esprit students in their learning journey.
 
