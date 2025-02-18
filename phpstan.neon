@@ -1,0 +1,7 @@
+includes:
+    - vendor/phpstan/phpstan-symfony/extension.neon
+parameters:
+    level: 5  # You can adjust this level (0 to 9, where 9 is the strictest)
+    paths:
+        - src  # Specify the directory to scan
+
