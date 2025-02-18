@@ -85,7 +85,7 @@ final class ProductController extends AbstractController{
         $products = $repo->searchProducts($query);
 
         // Render search results using a partial Twig template
-        $html = $this->renderView('crud_product/_search_results.html.twig', [
+        $html = $this->renderView('product/_search_results.html.twig', [
             'products' => $products,
         ]);
 
