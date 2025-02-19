@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PiReady - Workshop de Démarrage</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        .navbar {
+            background-color: #dc3545 !important;
+        }
+        .navbar-brand, .nav-link, footer p {
+            color: white !important;
+        }
+        .header {
+            background-color: #6c757d;
+            color: white;
+        }
+        .list-group-item {
+            background-color: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">PiReady</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#about">À propos</a></li>
+                <li class="nav-item"><a class="nav-link" href="#program">Programme</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<header class="header text-white text-center py-5">
+    <div class="container">
+        <img src="https://symfony.com/logos/symfony_black_03.png" alt="Symfony Logo" width="100" class="me-3">
+        <img src="https://cdio.esprit.tn/images/cdio/esprit.png" alt="Esprit Logo" width="100">
+        <h1>PiReady - Workshop</h1>
+        <p class="lead">Formation avancée au framework Symfony pour les étudiants 3A</p>
+    </div>
+</header>
+
+<section id="about" class="py-5">
+    <div class="container">
+        <h2 class="text-center">À propos de PiReady</h2>
+        <p class="text-center">Ce workshop a pour objectif de fournir une formation avancée sur le framework Symfony en abordant des concepts essentiels et des outils indispensables.</p>
+    </div>
+</section>
+
+<section id="program" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center">Programme</h2>
+        <ul class="list-group">
+            <li class="list-group-item">Introduction et rappel</li>
+            <li class="list-group-item">La différence entre API et Bundle
+                <ul>
+                    <li>Exemple des bundles disponibles</li>
+                    <li>Exemple des API disponibles</li>
+                </ul>
+            </li>
+            <li class="list-group-item">Intégration d’un bundle
+                <ul>
+                    <li>DoctrineFixturesBundle</li>
+                    <li>...</li>
+                    <li>...</li>
+                </ul>
+            </li>
+            <li class="list-group-item">Ajax dans un projet Symfony</li>
+            <li class="list-group-item">PhpStan (Analysateur statique du code source)</li>
+        </ul>
+    </div>
+</section>
+
+<section id="speakers" class="py-5">
+    <div class="container">
+        <h2 class="text-center">Intervenants</h2>
+        <ul class="list-group text-center">
+            <li class="list-group-item">Asma Ayari - Enseignante à Esprit, Doctorante ingénieur en informatique</li>
+            <li class="list-group-item">Badia Bouhdid - Enseignante à Esprit, Docteur ingénieur en informatique</li>
+            <li class="list-group-item">Rim Douss - Enseignante à Esprit, Docteur ingénieur en informatique</li>
+            <li class="list-group-item">Ghada Ben Khalifa - Enseignante à Esprit, Doctorante ingénieur en informatique</li>
+            <li class="list-group-item">Imen Elhakim - Enseignante à Esprit, Ingénieur en informatique</li>
+            <li class="list-group-item">Mounira Hmayda - Enseignante à Esprit, Docteur ingénieur en informatique</li>
+        </ul>
+    </div>
+</section>
+
+<footer class="bg-dark text-white text-center py-3">
+    <p>&copy; 2025 PiReady - Tous droits réservés</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
