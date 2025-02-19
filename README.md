@@ -1,9 +1,8 @@
 # 🚀 PiReady - Workshop de Démarrage
 
-<img src="https://symfony.com/logos/symfony_black_03.png" alt="Symfony Logo" width="100">
-
 ## 📌 Description
 PiReady est un workshop destiné aux étudiants souhaitant approfondir leurs connaissances sur le framework Symfony. Ce workshop couvre des concepts avancés et des outils essentiels permettant une meilleure maîtrise du développement avec Symfony.
+<img src="https://symfony.com/logos/symfony_black_03.png" alt="Symfony Logo" width="100">
 
 ## 🎯 Objectifs
 - 📚 Comprendre les bases et les concepts avancés de Symfony
