@@ -41,10 +41,9 @@
             </tr>
         </tbody>
     </table>
-
-    <a href="{{ path('app_product_index') }}">back to list</a>
-
-    <a href="{{ path('app_product_edit', {'id': product.id}) }}">edit</a>
-
-    {{ include('product/_delete_form.html.twig') }}
+ <div class="container d-flex gap-2 justify-content-center">
+    <a href="{{ path('app_product_index') }}" class="btn btn-info">back to list</a>
+    <a href="{{ path('app_product_edit', {'id': product.id}) }}" class="btn btn-warning">edit</a>
+     {{ include('product/_delete_form.html.twig') }}
+ </div>
 {% endblock %}
