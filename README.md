@@ -1,6 +1,6 @@
 # 🚀 PiReady - Workshop de Démarrage
 
-<img src="https://symfony.com/logos/symfony_black_03.png" alt="Symfony Logo" width="200">
+<img src="https://symfony.com/logos/symfony_black_03.png" alt="Symfony Logo" width="100">
 
 ## 📌 Description
 PiReady est un workshop destiné aux étudiants souhaitant approfondir leurs connaissances sur le framework Symfony. Ce workshop couvre des concepts avancés et des outils essentiels permettant une meilleure maîtrise du développement avec Symfony.
@@ -22,16 +22,6 @@ PiReady est un workshop destiné aux étudiants souhaitant approfondir leurs con
    - 🔧 Autres Bundles essentiels
 4. **⚡ Ajax dans un projet Symfony**
 5. **🛡️ PhpStan (Analysateur statique du code source)**
-
-## 👩‍🏫 Intervenants
-- **👩‍🏫 Asma Ayari** - Enseignante à Esprit, Doctorante ingénieur en informatique
-- **👩‍🏫 Badia Bouhdid** - Enseignante à Esprit, Docteur ingénieur en informatique
-- **👩‍🏫 Rim Douss** - Enseignante à Esprit, Docteur ingénieur en informatique
-- **👩‍🏫 Ghada Ben Khalifa** - Enseignante à Esprit, Doctorante ingénieur en informatique
-- **👩‍🏫 Imen Elhakim** - Enseignante à Esprit, Ingénieur en informatique
-- **👩‍🏫 Mounira Hmayda** - Enseignante à Esprit, Docteur ingénieur en informatique
-  
-<img src="https://cdio.esprit.tn/images/cdio/esprit.png" alt=" ESPRITLogo" width="200">
 
 ## 💻 Technologies utilisées
 - 🖥️ Symfony
@@ -57,6 +47,16 @@ PiReady est un workshop destiné aux étudiants souhaitant approfondir leurs con
    ```sh
    symfony server:start
    ```
+
+## 👩‍🏫 Intervenants
+- **👩‍🏫 Asma Ayari** - Enseignante à Esprit, Doctorante ingénieur en informatique
+- **👩‍🏫 Badia Bouhdid** - Enseignante à Esprit, Docteur ingénieur en informatique
+- **👩‍🏫 Rim Douss** - Enseignante à Esprit, Docteur ingénieur en informatique
+- **👩‍🏫 Ghada Ben Khalifa** - Enseignante à Esprit, Doctorante ingénieur en informatique
+- **👩‍🏫 Imen Elhakim** - Enseignante à Esprit, Ingénieur en informatique
+- **👩‍🏫 Mounira Hmayda** - Enseignante à Esprit, Docteur ingénieur en informatique
+  
+<img src="https://cdio.esprit.tn/images/cdio/esprit.png" alt=" ESPRITLogo" width="200">
 
 ## 🤝 Contributions
 Les contributions sont les bienvenues ! Merci de suivre les bonnes pratiques de développement et de proposer des pull requests bien documentées.
