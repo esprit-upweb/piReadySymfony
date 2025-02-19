@@ -1,31 +1,70 @@
-# PI Ready Workshop - Esprit Students
+# 🚀 PiReady - Workshop de Démarrage
 
 <img src="https://symfony.com/logos/symfony_black_03.png" alt="Symfony Logo" width="200">
 
-Welcome to the **PI Ready Workshop** project! This repository is dedicated to supporting Esprit students in their learning journey.
+## 📌 Description
+PiReady est un workshop destiné aux étudiants souhaitant approfondir leurs connaissances sur le framework Symfony. Ce workshop couvre des concepts avancés et des outils essentiels permettant une meilleure maîtrise du développement avec Symfony.
 
-## About the Project
-This project is working on the **Product Entity**, focusing on its development and optimization using the **Symfony Framework**.
-This project is working on the **Product Entity**, focusing on its development and optimization.
-This project serves as a practical resource for students participating in the **PI Ready Workshop** at Esprit. It provides hands-on exercises, code examples, and collaborative opportunities to enhance their understanding of modern development practices.
+## 🎯 Objectifs
+- 📚 Comprendre les bases et les concepts avancés de Symfony
+- 🔗 Distinguer les API des Bundles et apprendre à les utiliser
+- 🛠️ Intégrer des Bundles dans un projet Symfony
+- ⚡ Utiliser Ajax dans un projet Symfony
+- ✅ Améliorer la qualité du code avec PhpStan
 
-## Objectives
-- Help students gain practical experience in project-based learning.
-- Foster collaboration and teamwork.
-- Explore innovative solutions using the latest technologies.
+## 📅 Programme
+1. **📖 Introduction et rappel**
+2. **🔍 Différence entre API et Bundle**
+   - 📦 Exemples de Bundles disponibles
+   - 🌍 Exemples d'API disponibles
+3. **🛠️ Intégration d’un Bundle**
+   - ⚙️ DoctrineFixturesBundle
+   - 🔧 Autres Bundles essentiels
+4. **⚡ Ajax dans un projet Symfony**
+5. **🛡️ PhpStan (Analysateur statique du code source)**
 
-## How to Contribute
-Students are encouraged to:
-- Fork the repository and work on their assigned tasks.
-- Clone the forked repository locally using `git clone <your-forked-repo-url>`.
-- Follow best practices in coding and documentation.
-
-Students are encouraged to:
-- Fork the repository and work on their repositories.
-- Follow best practices in coding and documentation.
-
-## Acknowledgement
-We would like to express our gratitude to **ESPRIT** and the contributing teachers for their dedication and support in making this workshop a success.
+## 👩‍🏫 Intervenants
+- **👩‍🏫 Asma Ayari** - Enseignante à Esprit, Doctorante ingénieur en informatique
+- **👩‍🏫 Badia Bouhdid** - Enseignante à Esprit, Docteur ingénieur en informatique
+- **👩‍🏫 Rim Douss** - Enseignante à Esprit, Docteur ingénieur en informatique
+- **👩‍🏫 Ghada Ben Khalifa** - Enseignante à Esprit, Doctorante ingénieur en informatique
+- **👩‍🏫 Imen Elhakim** - Enseignante à Esprit, Ingénieur en informatique
+- **👩‍🏫 Mounira Hmayda** - Enseignante à Esprit, Docteur ingénieur en informatique
+  
 <img src="https://cdio.esprit.tn/images/cdio/esprit.png" alt=" ESPRITLogo" width="200">
+
+## 💻 Technologies utilisées
+- 🖥️ Symfony
+- 📂 Doctrine
+- 🔍 PhpStan
+- ⚡ Ajax
+- 🎨 Bootstrap
+
+## 🛠️ Installation
+1. 📥 Cloner le dépôt :
+   ```sh
+   git clone https://github.com/votre-repo/PiReady.git
+   ```
+2. 📂 Accéder au dossier du projet :
+   ```sh
+   cd PiReady
+   ```
+3. 📦 Installer les dépendances :
+   ```sh
+   composer install
+   ```
+4. 🚀 Lancer le serveur Symfony :
+   ```sh
+   symfony server:start
+   ```
+
+## 🤝 Contributions
+Les contributions sont les bienvenues ! Merci de suivre les bonnes pratiques de développement et de proposer des pull requests bien documentées.
+
+## 🎉 Remerciements
+Un grand merci au **Google Developer Group at Esprit_On_Campus** pour son soutien et son organisation ! 🚀👏
+
+![Google Developer Group](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3OA7xPGA0PZ8TAWD-e_-3mP8wSjLjYDUGRw&s)
+
 
 Happy coding!
