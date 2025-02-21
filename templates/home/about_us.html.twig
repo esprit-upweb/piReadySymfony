@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}About us{% endblock %}
+
+{% block body %}
+    <div>
+        <br>
+        <select id="language-selector">
+                    <option value="en">English</option>
+                    <option value="fr">French</option>
+                    <option value="ar">Arabic</option>
+        </select>
+        <h1 id='title'>Se former autrement</h1>
+        <p id="description">"ESPRIT" lors de sa création s'est donnée comme mission principale de former des ingénieurs « autrement ».Pour cela l'école a adopté dès le départ une pédagogie nouvelle, dynamique mettant l'élève au centre de l'apprentissage. L'adoption de l'APP (apprentissage par projet/problème) est venue renforcer cette volonté. Un centre d'innovation pédagogique permet la formation des enseignants à ces nouvelles pratiques pédagogiques qui s'étendent petit à petit à l'ensemble du cursus. </p>
+        <br>
+    </div>
+    <script>
+        async function translateText(text, targetLang) {
+            const requestBody = {
+                texts: [text],
+                target_language: targetLang
+            };
+            const response = await fetch('http://127.0.0.1:5000/translate', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(requestBody),
+            });
+            if (!response.ok) {
+                const errorData = await response.json();
+                console.error('API Error:', errorData); 
+                throw new Error(`API Error: ${response.status} - ${response.statusText}`);
+            }
+            const data = await response.json();
+            return data.translated_texts[0]; 
+        }
+
+        document.getElementById('language-selector').addEventListener('change', async function () {
+            const lang = this.value;
+            const title = document.getElementById('title').innerText;
+            const description = document.getElementById('description').innerText;
+            try {
+                const translatedTitle = await translateText(title, lang);
+                document.getElementById('title').innerText = translatedTitle;
+                const translatedDescription = await translateText(description, lang);
+                document.getElementById('description').innerText = translatedDescription;
+            } catch (error) {
+                console.error('Translation failed:', error);
+                alert('Translation failed. Please check the console for details.');
+            }
+        });
+
+    </script>
+{% endblock %}
